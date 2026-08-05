@@ -99,20 +99,6 @@ else:
     fmin_l_bfgs_b = spopt.fmin_l_bfgs_b
 
 
-def _is_string(var):
-    try:
-        if isinstance(var, basestring):
-            return True
-    except NameError:
-        try:
-            if isinstance(var, str):
-                return True
-        except:
-            return False
-    except:
-        return False
-
-
 class Optimizer(object):
     """
     Base class for all control pulse optimisers. This class should not be
